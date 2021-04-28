@@ -1,0 +1,29 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "23:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - patrickhulce
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: lerna
+    versions:
+    - 3.22.1
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
